@@ -1,0 +1,8 @@
+.Workpage {
+  width: 100%;
+  height: 100vh;
+  background-color: #05040b;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}

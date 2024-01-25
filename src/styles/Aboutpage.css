@@ -1,0 +1,84 @@
+.Aboutpage {
+  width: 100%;
+  height: 100vh;
+  background-color: #05040b;
+  overflow: hidden;
+  display: flex;
+  padding-top: 10%;
+  padding-left: 10%;
+  padding-right: 10%;
+  font-size: 1.4rem;
+  overflow-y: scroll;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-top: 6rem;
+}
+main .aboutContainer-imageDiv {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+main .aboutContainer-imageDiv .aboutContainer-image {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  border: 0.01px #2f81f7 solid;
+  border-radius: 15px;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.5;
+  position: relative;
+}
+
+/* TRYING OUT THE GLOW EFFECT  */
+main .aboutContainer-imageDiv .aboutContainer-image::before {
+  background: radial-gradient(
+    800px circle at 100px 100px,
+    rgba(255, 255, 255, 0.06),
+    transparent 40%
+  );
+  border-radius: inherit;
+  content: "";
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+/* GLOW EFFECT THINGIE ENDS HERE */
+
+main .aboutContainer-imageDiv:hover .aboutContainer-image {
+  opacity: 1;
+  transition: opacity 0.7s ease-out 0.1s;
+}
+
+main .aboutContainer-text {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media screen and (min-width: 1200px) {
+  main {
+    padding-top: 0;
+    flex-direction: row;
+  }
+}
+
+/* main .headerdiv {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .headerdiv h1 {
+  width: 100%;
+  display: block;
+} */
