@@ -4,6 +4,48 @@ import { motion } from "framer-motion";
 import preciousImage from "../assets/DSC_6212vee.jpg";
 // import { useScroll, useTransform } from "framer-motion";
 // import { useScroll, useTransform } from "framer-motion";
+import { FaBeer } from "react-icons/fa";
+import { FaReact } from "react-icons/fa";
+import { FaVuejs } from "react-icons/fa";
+import { FaGit } from "react-icons/fa";
+import { FaJs } from "react-icons/fa";
+import { FaNode } from "react-icons/fa";
+
+const iconsList = [
+  {
+    icon: <FaReact />,
+    link: "",
+  },
+  {
+    icon: <FaVuejs />,
+    link: "",
+  },
+  {
+    icon: <FaGit />,
+    link: "",
+  },
+  {
+    icon: <FaJs />,
+    link: "",
+  },
+
+  {
+    icon: <FaNode />,
+    link: "",
+  },
+  {
+    icon: <FaNode />,
+    link: "",
+  },
+  {
+    icon: <FaNode />,
+    link: "",
+  },
+  {
+    icon: <FaNode />,
+    link: "",
+  },
+];
 
 export default function AboutPage() {
   //get borders to show if possible
@@ -41,10 +83,10 @@ export default function AboutPage() {
             animate="visible"
             transition={{ duration: 1, delay: 0.5 }}
           >
-            <h1>
+            <h3>
               Hello, I am Velia Precious a seasoned developer and proficient
               technical writer.
-            </h1>
+            </h3>
           </motion.div>
 
           {/* JUST USE ONSCROLL ANIMATIONS AND LATER FIX THE H1 INTO AN HORIZONTAL SCROLL POSITION ON SCROLL */}
@@ -68,6 +110,26 @@ export default function AboutPage() {
             end-users and fellow developers.
           </h4>
           <p>Here are some technologies I have been working with:</p>
+
+          <div className="icons-div">
+            <div className="about-iconsContainer">
+              {iconsList.map((item, index) => (
+                <span className="aboutIcons">{item.icon}</span>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <p>
+              I am currently learning Japanese and a Mechanical Engineering
+              student. I like to watch anime and read books in my free time
+            </p>
+          </div>
+
+          <div>
+            <p>Reach out to me:</p>
+            <button>My work</button>
+          </div>
         </div>
       </motion.main>
     </motion.div>
