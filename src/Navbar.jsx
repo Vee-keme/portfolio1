@@ -64,12 +64,13 @@ export default function Navbar() {
           <li data-text="about">
             <Link to="/about">About</Link>
           </li>
-          {/* <li data-text="work">
+          <li data-text="work">
             <Link to="/work">Work</Link>
           </li>
-          <li data-text="contact">
+          {/* <li data-text="contact">
             <Link to="/contact">Contact</Link>
           </li> */}
+          <li>another</li>
         </ul>
       </div>
     </>

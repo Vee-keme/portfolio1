@@ -1,8 +1,77 @@
 .Workpage {
+  /* width: 100%;
+  height: 100vh;
+  background-color: #05040b;
+  overflow: hidden; */
   width: 100%;
   height: 100vh;
   background-color: #05040b;
-  overflow: hidden;
-  display: grid;
-  place-items: center;
+  overflow-x: hidden;
+  display: flex;
+  padding-top: 10%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.Workpage section {
+  margin-top: 6rem;
+}
+.projects--text {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.projects--text p {
+  font-size: 11px;
+  letter-spacing: 1.3px;
+  line-height: 1.6rem;
+  text-align: start;
+}
+
+.projects__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* inside media query */
+@media screen and (min-width: 1200px) {
+  .Workpage section {
+    margin-top: 0;
+  }
+  .projects--text {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .projects--text p {
+    font-size: 15px;
+    letter-spacing: 1.3px;
+    line-height: 1.6rem;
+    text-align: start;
+  }
+  .projects__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  .projects__container .projects--imageDiv {
+    width: 100%;
+    height: 100%;
+    display: flex; /* Use flex to help with centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+  }
+
+  .projects__container .projects--imageDiv .projects--image {
+    width: 100%;
+    height: 100%;
+    border-radius: 1.4rem;
+    justify-self: center;
+    object-fit: contain;
+    border: 1px solid red;
+  }
 }

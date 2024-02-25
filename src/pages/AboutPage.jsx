@@ -83,32 +83,32 @@ export default function AboutPage() {
             animate="visible"
             transition={{ duration: 1, delay: 0.5 }}
           >
-            <h3>
+            <p>
               Hello, I am Velia Precious a seasoned developer and proficient
               technical writer.
-            </h3>
+            </p>
           </motion.div>
 
           {/* JUST USE ONSCROLL ANIMATIONS AND LATER FIX THE H1 INTO AN HORIZONTAL SCROLL POSITION ON SCROLL */}
-          <h4 className="expertise">
+          <p className="expertise">
             My expertise lies at the intersection of coding and crafting
             articulate documentation, with a remarkable 80% of my time dedicated
             to coding, while the remaining 20% is devoted to honing concise and
             intelligible technical materials.
-          </h4>
-          <h4 className="drive">
+          </p>
+          {/* <p className="drive">
             Drawing immense inspiration from the captivating realm of anime, I
             infuse creativity and imagination into my coding and writing
             pursuits. My ultimate objective is to engineer code that not only
             operates with utmost efficiency but is also effortlessly
             comprehensible and maintainable.
-          </h4>
-          <h4>
+          </p> */}
+          <p>
             Be it tackling intricate algorithms or composing user manuals, I
             ardently strive to deliver exceptional work of premium quality,
             meticulously tailored to cater to the diverse requirements of both
             end-users and fellow developers.
-          </h4>
+          </p>
           <p>Here are some technologies I have been working with:</p>
 
           <div className="icons-div">
@@ -128,7 +128,7 @@ export default function AboutPage() {
 
           <div>
             <p>Reach out to me:</p>
-            <button>My work</button>
+            <button>Check out my work →</button>
           </div>
         </div>
       </motion.main>
