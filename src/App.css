@@ -210,6 +210,7 @@
   -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.5);
   font-weight: bolder;
   position: relative;
+  color: rgba(255, 255, 255, 0.9);
 }
 .nav-links li::before {
   content: attr(dataText);
