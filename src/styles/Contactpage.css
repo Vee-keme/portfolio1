@@ -4,6 +4,8 @@
   background-color: #05040b;
   overflow-x: hidden;
   display: flex;
+  justify-content: center;
+  /* align-items: center; */
   padding-top: 10%;
   padding-left: 10%;
   padding-right: 10%;
@@ -14,5 +16,52 @@
 @media screen and (min-width: 1200px) {
   .Contactpage section {
     margin-top: 0;
+  }
+  .Contactpage section h2 {
+    font-size: 7rem;
+  }
+  .Contactpage section h3 {
+    font-size: 2rem;
+    line-height: 29px;
+    letter-spacing: 2.5px;
+  }
+  .Contactpage-socials {
+    display: flex;
+    margin-top: 4rem;
+    align-items: center;
+    flex-direction: column;
+    gap: 5rem;
+  }
+  .Contactpage-socials__text1 {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+  }
+
+  .Contactpage-socials__text1-icon,
+  .Contactpage-socials__text2-icon {
+    font-size: 2.5rem;
+  }
+
+  .Contactpage-socials__text1 div {
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+  }
+  .Contactpage-socials__text1 div p,
+  .Contactpage-socials__text2-text {
+    font-size: 1.7rem;
+    /* line-height: 50px; */
+    /* text-indent: center; */
+  }
+  .Contactpage-socials__text2 {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  .Contactpage-socials__icons {
+    display: flex;
   }
 }
