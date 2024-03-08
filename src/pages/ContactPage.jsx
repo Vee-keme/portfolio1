@@ -14,6 +14,24 @@ import {
 import resume from "../assets/resume.pdf";
 
 export default function ContactPage() {
+  const socials = [
+    {
+      icon: <FaGithub />,
+      link: "https://github.com/Vee-keme",
+    },
+    {
+      icon: <FaLinkedin />,
+      link: "https://www.linkedin.com/in/precious-velia-b785a6221/",
+    },
+    {
+      icon: <FaInstagram />,
+      link: "http://www.instagram.com/velia1.0/",
+    },
+    {
+      icon: <FaTwitter />,
+      link: "https://twitter.com/Vee_keme",
+    },
+  ];
   return (
     <motion.div
       className="Contactpage"
@@ -33,12 +51,19 @@ export default function ContactPage() {
           <div className="Contactpage-socials__text1">
             <div>
               <FaEnvelope className="Contactpage-socials__text1-icon" />
-              <p>Send me a mail</p>
+              <p>
+                <a href="mailto:veliaprecious@gmail" target="_blank">
+                  Send me a mail
+                </a>
+              </p>
             </div>
 
             <div>
               <FaWhatsapp className="Contactpage-socials__text1-icon" />
-              <p>Reach me on Whatsapp</p>
+              <p>
+                <a href="https://wa.me/+2347011646703"></a>
+                Reach me on Whatsapp
+              </p>
             </div>
           </div>
 
@@ -55,7 +80,12 @@ export default function ContactPage() {
           </div>
 
           <div className="Contactpage-socials__icons">
-            <Link to="#">
+            {socials.map((item, i) => (
+              <Link to={item.link} key={i}>
+                <span>{item.icon}</span>
+              </Link>
+            ))}
+            {/* <Link to="#">
               <FaGithub />
             </Link>
             <Link to="#">
@@ -66,7 +96,7 @@ export default function ContactPage() {
             </Link>
             <Link to="#">
               <FaInstagram />
-            </Link>
+            </Link> */}
           </div>
         </div>
       </section>

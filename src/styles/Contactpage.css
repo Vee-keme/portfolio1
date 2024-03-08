@@ -63,5 +63,9 @@
 
   .Contactpage-socials__icons {
     display: flex;
+    gap: 20px;
+  }
+  .Contactpage-socials__icons span {
+    font-size: 2.5rem;
   }
 }
