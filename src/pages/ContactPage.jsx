@@ -61,7 +61,7 @@ export default function ContactPage() {
             <div>
               <FaWhatsapp className="Contactpage-socials__text1-icon" />
               <p>
-                <a href="https://wa.me/+2347011646703"></a>
+                <a href="https://api.whatsapp.com/send?phone=2347011646703&text=Send20%a20%quote"></a>
                 Reach me on Whatsapp
               </p>
             </div>
