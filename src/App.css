@@ -188,7 +188,7 @@
 }
 
 /* ----------------------------------------------nav-link-------------------- */
-.nav-links {
+/* .nav-links {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -202,7 +202,24 @@
   padding: 0 10%;
   background-color: #05040b;
   letter-spacing: 2px;
+} */
+.nav-links {
+  display: flex;
+  position: fixed;
+
+  top: 0;
+  left: -100%;
+  height: 100vh;
+  width: 100%;
+  z-index: 10;
+  padding: 60% 0 10% 10%;
+  background-color: #05040b;
+  transition: all 0.8s ease-in-out;
 }
+.nav-links.open {
+  left: 0;
+}
+
 .nav-links li {
   list-style: none;
   font-size: 4em;
@@ -211,18 +228,27 @@
   font-weight: bolder;
   position: relative;
   color: rgba(255, 255, 255, 0.9);
+  text-align: start;
 }
-.nav-links li::before {
-  content: attr(dataText);
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: rgba(255, 255, 255, 0.9);
-  transition: 0.3s linear;
-  clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
-}
-.nav-links li:hover::before {
-  clip-path: polygon(0 0, 100% 0, 99% 100%, 0% 100%);
+@media screen and (min-width: 1200px) {
+  .nav-links {
+    padding-top: 90%;
+    /* position: fixed; */
+    /* bottom: 0;
+    left: 0; */
+    height: 100vh;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+
+    flex-direction: column;
+    padding: 20% 10%;
+    background-color: #05040b;
+    letter-spacing: 2px;
+  }
+  .nav-links.open {
+    left: 0;
+  }
 }
 
 /* -----------------------CURSOR--------------------- */

@@ -1,14 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { words } from "./utils/words";
+import { motion } from "framer-motion";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [word, setWord] = useState("");
-  // const navId = document.getElementById("NavItems");
-  const navId = document.getElementsByClassName("nav-links");
 
-  // const navLinks1 = navLinks;
   //set navbar button to toggle
   const toggle = () => {
     setIsOpen(!isOpen);
@@ -51,12 +49,16 @@ export default function Navbar() {
       </div>
 
       <div
-        className="nav-links"
+        // className="nav-links"
+        className={`nav-links ${isOpen ? "open" : ""}`}
         style={{
           display: isOpen ? "block" : "none",
+          // left: !isOpen ? -500 : 0,
+          // transform: "left 1s linear",
         }}
         onClick={toggle}
       >
+        {/* console.log() */}
         <ul>
           <li data-text="home">
             <Link to="/">Home</Link>
@@ -72,6 +74,10 @@ export default function Navbar() {
           </li>
         </ul>
       </div>
+      <div className="home-extra"></div>
+      <div className="about-extra"></div>
+      <div className="work-extra"></div>
+      <div className="contact-extra"></div>
     </>
   );
 }
