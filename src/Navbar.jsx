@@ -67,10 +67,9 @@ export default function Navbar() {
           <li data-text="work">
             <Link to="/work">Work</Link>
           </li>
-          {/* <li data-text="contact">
+          <li data-text="contact">
             <Link to="/contact">Contact</Link>
-          </li> */}
-          <li>another</li>
+          </li>
         </ul>
       </div>
     </>

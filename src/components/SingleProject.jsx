@@ -4,11 +4,10 @@ import { projectData } from "../projectsData";
 // import "../styles/Workpage.css";
 
 const SingleProject = () => {
-  console.log("this", projectData);
   return (
     <div className="single-project">
       {projectData.map((item, index) => (
-        <div>
+        <div key={index}>
           <h3 className="text-start my-6 text-4xl">{item?.title}</h3>
           <div className="projects__container">
             <div className="projects--imageDiv">

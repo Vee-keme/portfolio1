@@ -2,7 +2,17 @@
   width: 100%;
   height: 100vh;
   background-color: #05040b;
-  overflow: hidden;
-  display: grid;
-  place-items: center;
+  overflow-x: hidden;
+  display: flex;
+  padding-top: 10%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.Contactpage section {
+  margin-top: 6rem;
+}
+@media screen and (min-width: 1200px) {
+  .Contactpage section {
+    margin-top: 0;
+  }
 }
