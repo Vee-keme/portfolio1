@@ -1,11 +1,14 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { words } from "./utils/words";
-import { motion } from "framer-motion";
+import netflixClone from "../src/assets/project1.png";
+import repoApp from "../src/assets/project2.png";
+import lightsOut from "../src/assets/project3.png";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [word, setWord] = useState("");
+  const [showHome, setShowHome] = useState();
 
   //set navbar button to toggle
   const toggle = () => {
@@ -61,7 +64,19 @@ export default function Navbar() {
         {/* console.log() */}
         <ul>
           <li data-text="home">
-            <Link to="/">Home</Link>
+            <Link
+              to="/"
+              onMouseEnter={() => {
+                setWord("Home");
+                setShowHome(true);
+              }}
+              onMouseLeave={() => {
+                setWord("");
+                setShowHome(false);
+              }}
+            >
+              Home
+            </Link>
           </li>
           <li data-text="about">
             <Link to="/about">About</Link>
@@ -74,10 +89,11 @@ export default function Navbar() {
           </li>
         </ul>
       </div>
-      <div className="home-extra"></div>
-      <div className="about-extra"></div>
-      <div className="work-extra"></div>
-      <div className="contact-extra"></div>
+      {showHome && (
+        <div className="extraImage">
+          <img src={showHome ? netflixClone : ""} alt="" />
+        </div>
+      )}
     </>
   );
 }
