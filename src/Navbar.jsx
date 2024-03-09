@@ -40,9 +40,9 @@ export default function Navbar() {
     <>
       <div className="Navbar">
         <div className="Navbar-title">
-          <h1>
-            V <span>{word ? `${word}` : "null"}</span>
-          </h1>
+          <div className="nav-word">
+            V <span className="line">{word ? `${word}` : "null"}</span>
+          </div>
         </div>
 
         <nav className="Navbar-menu" onClick={toggle}>
