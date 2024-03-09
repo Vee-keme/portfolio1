@@ -9,6 +9,9 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [word, setWord] = useState("");
   const [showHome, setShowHome] = useState();
+  const [showAbout, setShowAbout] = useState();
+  const [showWork, setShowWork] = useState();
+  const [showContact, setShowContact] = useState();
 
   //set navbar button to toggle
   const toggle = () => {
@@ -79,21 +82,83 @@ export default function Navbar() {
             </Link>
           </li>
           <li data-text="about">
-            <Link to="/about">About</Link>
+            <Link
+              to="/about"
+              onMouseEnter={() => {
+                setWord("About");
+                setShowAbout(true);
+              }}
+              onMouseLeave={() => {
+                setWord("");
+                setShowAbout(false);
+              }}
+            >
+              About
+            </Link>
           </li>
           <li data-text="work">
-            <Link to="/work">Work</Link>
+            <Link
+              to="/work"
+              onMouseEnter={() => {
+                setWord("Work");
+                setShowWork(true);
+              }}
+              onMouseLeave={() => {
+                setWord("");
+                setShowWork(false);
+              }}
+            >
+              Work
+            </Link>
           </li>
           <li data-text="contact">
-            <Link to="/contact">Contact</Link>
+            <Link
+              to="/contact"
+              onMouseEnter={() => {
+                setWord("Contact");
+                setShowContact(true);
+              }}
+              onMouseLeave={() => {
+                setWord("");
+                setShowContact(false);
+              }}
+            >
+              Contact
+            </Link>
           </li>
         </ul>
       </div>
-      {showHome && (
-        <div className="extraImage">
-          <img src={showHome ? netflixClone : ""} alt="" />
-        </div>
-      )}
+      {/* {showHome && ( */}
+      <div>
+        <img
+          // className="extraImage"
+          // className={`extraImage ${showHome ? "show" : "none"}`}
+          className={`extraImage ${
+            showHome
+              ? "show"
+              : showAbout
+              ? "show"
+              : showWork
+              ? "show"
+              : showContact
+              ? "show"
+              : "none"
+          }`}
+          src={
+            showHome
+              ? netflixClone
+              : showAbout
+              ? netflixClone
+              : showWork
+              ? netflixClone
+              : showContact
+              ? netflixClone
+              : ""
+          }
+          alt=""
+        />
+      </div>
+      {/* )} */}
     </>
   );
 }
