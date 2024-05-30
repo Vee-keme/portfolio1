@@ -41,7 +41,11 @@ export default function Navbar() {
       <div className="Navbar">
         <div className="Navbar-title">
           <div className="nav-word">
-            V <span className="line">{word ? `${word}` : "null"}</span>
+            V{" "}
+            <span className="line">
+              {/* {word ? `${word}` : "null"} */}
+              elia
+            </span>
           </div>
         </div>
 
