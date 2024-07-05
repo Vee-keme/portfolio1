@@ -6,18 +6,23 @@ import ContactPage from "../pages/ContactPage";
 import AboutPage from "../pages/AboutPage";
 import WorkPage from "../pages/WorkPage";
 import { AnimatePresence } from "framer-motion";
+import Layout from "../layout/Layout";
 
 export default function AnimatedRoutes() {
   // continue video from where he added const location = useLocation();
   const location = useLocation();
   return (
-    <AnimatePresence>
-      <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/work" element={<WorkPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-      </Routes>
-    </AnimatePresence>
+    <>
+      <AnimatePresence>
+        {/* <Layout> */}
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/work" element={<WorkPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
+        {/* </Layout> */}
+      </AnimatePresence>
+    </>
   );
 }

@@ -1,12 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 #root {
   width: 100%;
-  max-width: 1280px;
+  /* max-width: 1280px; */
   margin: 0 auto;
-  /* padding: 1rem; */
+  padding: 1rem;
   padding-left: 0;
   padding-right: 0;
   text-align: center;
@@ -58,6 +54,7 @@
   position: absolute;
   bottom: 0;
   padding: 2rem;
+  padding-bottom: 0;
   /* z-index: 12; */
 }
 
@@ -110,7 +107,7 @@
 
 /*------------------------------------------------MAIN -----------CONTENT */
 .MainContent {
-  width: 100%;
+  width: 100vw;
   margin: 6rem 0;
   display: flex;
   justify-content: center;
@@ -164,9 +161,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin: 20rem; */
-    /* margin-left: 20rem;
-    margin-right: 20rem; */
   }
   .MainContent h1 {
     font-size: 5rem;
