@@ -7,6 +7,7 @@ import React, { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./Navbar";
 import AnimatedRoutes from "./components/AnimatedRoutes";
+import Layout from "./layout/Layout";
 
 function App() {
   const [cursorX, setCursorX] = useState(null);
@@ -50,24 +51,26 @@ function App() {
   });
 
   return (
-    <div className="App">
-      <Navbar />
-      <AnimatedRoutes />
+    <div className="w-full h-full">
+      <Layout>
+        <Navbar />
+        <AnimatedRoutes />
+      </Layout>
 
-      <div
+      {/* <div
         className="cursor"
         style={{
           left: cursorX,
           top: cursorY,
         }}
-      ></div>
-      <div
+      ></div> */}
+      {/* <div
         className="outerCursor"
         style={{
           left: outerCursorX,
           top: outerCursorY,
         }}
-      ></div>
+      ></div> */}
     </div>
   );
 }

@@ -37,7 +37,7 @@ export default function Navbar() {
   displayRandomWord(words);
 
   return (
-    <>
+    <nav className="">
       <div className="Navbar">
         <div className="Navbar-title">
           <div className="nav-word">
@@ -49,13 +49,13 @@ export default function Navbar() {
           </div>
         </div>
 
-        <nav className="Navbar-menu" onClick={toggle}>
+        <div className="Navbar-menu" onClick={toggle}>
           {isOpen ? (
             <i className="fa-solid fa-xmark"></i>
           ) : (
             <i className="fa-solid fa-bars"></i>
           )}
-        </nav>
+        </div>
       </div>
 
       <div
@@ -163,6 +163,6 @@ export default function Navbar() {
         />
       </div>
       {/* )} */}
-    </>
+    </nav>
   );
 }

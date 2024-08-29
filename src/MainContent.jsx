@@ -1,7 +1,7 @@
 export default function MainContent() {
   return (
-    <div className="MainContent">
-      <div className="MainContent-text-box">
+    <div className="MainContent w-full h-full">
+      <div className="MainContent-text-box space-y-">
         <h1>
           {" "}
           <span>Hi there! My name is </span>VELIA PRECIOUS

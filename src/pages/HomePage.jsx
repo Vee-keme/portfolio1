@@ -12,9 +12,8 @@ export default function HomePage() {
       exit={{ x: window.innerWidth, transition: { duration: 0.1 } }}
     >
       {/* <Navbar /> */}
-      <div className="container">
+      <div className="container w-full h-full">
         <MainContent />
-        <SideContent />
       </div>
     </motion.div>
   );

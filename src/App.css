@@ -1,38 +1,29 @@
 #root {
   width: 100%;
-  /* max-width: 1280px; */
+  max-width: 1600px;
   margin: 0 auto;
   padding: 1rem;
-  padding-left: 0;
-  padding-right: 0;
+  /* padding-left: 0;
+  padding-right: 0; */
   text-align: center;
-}
-.HomePage {
-  width: 100%;
-  height: 100vh;
-  background-color: #05040b;
-  overflow: hidden;
 }
 
 /* -------------------------NAVBAR ----------------------------------------*/
-
+/* nav {
+  width: 100%;
+  background-color: #2f81f7;
+} */
 .Navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
-  background-color: #05040c;
-  /* new rulessssssss */
-  z-index: 1000;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 10%;
-  /* display: none; */
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 .Navbar-title {
   font-size: 1.4rem;
   padding: 0.5rem;
+  /* background: blue; */
 }
 .Navbar-menu {
   font-size: 3rem;
@@ -47,14 +38,21 @@
   }
 }
 
+.HomePage {
+  width: 100%;
+  height: 100vh;
+  background-color: #05040b;
+  /* overflow: hidden; */
+}
+
 /* ------------------------------------SIDE CONTENT--------------------------*/
 .SideContent {
-  width: 100%;
+  /* width: 100%; */
 
-  position: absolute;
-  bottom: 0;
-  padding: 2rem;
-  padding-bottom: 0;
+  /* position: absolute; */
+  /* bottom: 0; */
+  /* padding: 2rem;
+  padding-bottom: 0; */
   /* z-index: 12; */
 }
 
@@ -87,13 +85,17 @@
   transform: scale(1.2);
 }
 @media (min-width: 480px) {
-  .SideContent {
+  .container {
+    width: full;
     position: absolute;
-    left: 0;
-    top: 20%;
-    bottom: 10%;
-    margin: auto 0;
-    width: 10%;
+  }
+  .SideContent {
+    position: relative;
+    /* left: 0; */
+    /* top: 20%; */
+    /* bottom: 10%; */
+    /* margin: auto 0; */
+    /* width: 10%; */
   }
   .SideContent ul {
     width: 100%;
@@ -107,15 +109,8 @@
 
 /*------------------------------------------------MAIN -----------CONTENT */
 .MainContent {
-  width: 100vw;
-  margin: 6rem 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  position: absolute;
-  top: 20%;
-  bottom: 10%;
+  width: 100%;
+  height: 100%;
 }
 .MainContent h1 {
   font-family: var(--main-font);
@@ -157,7 +152,6 @@
 
 @media (min-width: 480px) {
   .MainContent {
-    width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -173,30 +167,16 @@
   }
 }
 /* ------------------------------HOMPAGE-------------------- */
-@media (min-width: 480px) {
+/* @media (min-width: 480px) {
   .container {
     height: fit-content;
     display: flex;
     flex-direction: row-reverse;
   }
-}
+} */
 
 /* ----------------------------------------------nav-link-------------------- */
-/* .nav-links {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  height: 90%;
-  width: 100%;
-  z-index: 1;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-flow: column;
-  padding: 0 10%;
-  background-color: #05040b;
-  letter-spacing: 2px;
-} */
+
 .nav-links {
   display: flex;
   position: fixed;
